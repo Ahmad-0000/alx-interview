@@ -1,8 +1,11 @@
+#!/usr/bin/env python3
 """
 A function to print the Pascal Triangle
 """
 
+
 def pascal_triangle(n):
+    """Returns a list that resembles Pascal triangle"""
     if n <= 0:
         return []
     old = []
