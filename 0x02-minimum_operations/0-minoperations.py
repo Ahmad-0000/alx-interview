@@ -4,8 +4,6 @@ Minimum Operations Problem
 """
 
 
-primes = [2]
-
 def is_prime(number):
     """Determining if a number is prime
     """
@@ -19,11 +17,14 @@ def is_prime(number):
 def minOperations(number):
     """Main function
     """
+    primes = [2]
     if number <= 0:
         return 0
     if is_prime(number):
         return number
     for i in range(3, number // 2, 2):
+        if i * i >= number:
+            break
         if is_prime(i):
             primes.append(i)
     total = 0
