@@ -5,6 +5,7 @@ Minimum Operations Problem
 
 primes = [2]
 
+
 def is_prime(number):
     """Determining if a number is prime
     """
