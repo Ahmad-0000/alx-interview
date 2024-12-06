@@ -19,13 +19,11 @@ def minOperations(number):
     """Main function
     """
     primes = [2]
-    if number <= 0:
+    if number <= 1:
         return 0
     if is_prime(number):
         return number
     for i in range(3, number // 2, 2):
-        if i * i >= number:
-            break
         if is_prime(i):
             primes.append(i)
     total = 0
