@@ -3,13 +3,15 @@
 Minimum Operations Problem
 """
 
+primes = [2]
 
 def is_prime(number):
     """Determining if a number is prime
     """
+    limit = number // 2
     if not number % 2 and number != 2:
         return False
-    for i in range(3, number // 2, 2):
+    for i in range(3, limit, 2):
         if not number % i:
             return False
     return True
@@ -18,12 +20,16 @@ def is_prime(number):
 def minOperations(number):
     """Main function
     """
-    primes = [2]
+    limit = number // 2
+    if number > 100000:
+        limit = number // 400
+    if number > 1000000000:
+        limit = number // 100000
     if number <= 1:
         return 0
     if is_prime(number):
         return number
-    for i in range(3, number // 2, 2):
+    for i in range(3, limit, 2):
         if is_prime(i):
             primes.append(i)
     total = 0
