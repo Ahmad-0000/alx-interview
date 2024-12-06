@@ -14,6 +14,7 @@ def is_prime(number):
             return False
     return True
 
+
 def minOperations(number):
     """Main function
     """
