@@ -17,7 +17,8 @@ def island_perimeter(grid):
         row += 1
     filtered_land = []
     for p in lands:
-        if (p[0] + 1, p[1]) in lands or (p[0] - 1, p[1]) in lands or (p[0], p[1] + 1) in lands or (p[0], p[1] - 1) in lands:
+        if (p[0] + 1, p[1]) in lands or (p[0] - 1, p[1]) in\
+        lands or (p[0], p[1] + 1) in lands or (p[0], p[1] - 1) in lands:
             if p not in filtered_land:
                 filtered_land.append(p)
     if len(lands) == 1:
