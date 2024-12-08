@@ -13,17 +13,28 @@ def validUTF8(data):
     """
     mask = 128
     temp = 0
-    following = 0
     i = 0
     while i < len(data):
+        following = 0
         temp = data[i]
         while temp & mask:
             following += 1
             temp = temp << 1
         if following > 4:
             return False
+        elif following == 1:
+            return False
+        elif following:
+            j = 0
+            temp = temp << 1
+            for k in range(8 - following - 1):
+                if temp & mask:
+                    j += 1
+                temp = temp << 1
+            if j == 0:
+                return False
         try:
-            while following - 1 > 0:
+            while (following - 1) > 0:
                 i += 1
                 following -= 1
                 temp = data[i]
