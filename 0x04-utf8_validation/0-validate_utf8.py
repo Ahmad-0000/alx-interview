@@ -24,15 +24,6 @@ def validUTF8(data):
             return False
         elif following == 1:
             return False
-        elif following:
-            j = 0
-            temp = temp << 1
-            for k in range(8 - following - 1):
-                if temp & mask:
-                    j += 1
-                temp = temp << 1
-            if j == 0:
-                return False
         try:
             while (following - 1) > 0:
                 i += 1
