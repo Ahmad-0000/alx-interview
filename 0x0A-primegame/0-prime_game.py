@@ -29,6 +29,8 @@ def get_primes(n):
 def isWinner(x, nums):
     """To determine who is the winner
     """
+    if x < 1:
+        return "Ben"
     M = 0
     B = 0
     for _ in range(x):
