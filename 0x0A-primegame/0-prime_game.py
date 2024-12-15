@@ -30,7 +30,7 @@ def isWinner(x, nums):
     """To determine who is the winner
     """
     if x < 1:
-        return "Ben"
+        return "Maria"
     M = 0
     B = 0
     for _ in range(x):
