@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+"""
+I don't know why do I assigned these problems
+"""
 
 
 def get_primes(n):
+    """Getting the prime numbers in the range from 2 to n
+    """
     if n < 2:
         return []
     primes = [True for _ in range(n + 1)]
@@ -22,6 +27,8 @@ def get_primes(n):
 
 
 def isWinner(x, nums):
+    """To determine who is the winner
+    """
     M = 0
     B = 0
     for _ in range(x):
