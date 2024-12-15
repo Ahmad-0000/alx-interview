@@ -16,21 +16,21 @@ def get_primes(n):
         if primes[i]:
             for _ in range(i * i, n + 1, i):
                 primes[_] = False
-        i += 2
+        i += 1
     i = 2
     while i < n + 1:
         if primes[i]:
             primes[i] = i
         i += 1
-    primes = [i for i in primes if i]
-    return primes
+    real_primes = [i for i in primes[2:] if i]
+    return real_primes
 
 
 def isWinner(x, nums):
     """To determine who is the winner
     """
     if x < 1:
-        return "Maria"
+        return ""
     M = 0
     B = 0
     for _ in range(x):
