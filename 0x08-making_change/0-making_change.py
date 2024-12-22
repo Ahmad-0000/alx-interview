@@ -6,8 +6,10 @@ Coins problem
 
 def makeChange(coins, target):
     """The solution"""
-    if not coins or target <= 0:
+    if not coins:
         return -1
+    if target <= 0:
+        return 0
     coins.sort()
     answer = []
     while target > 0:
